@@ -1,0 +1,44 @@
+<!--   
+
+       AUTORA: Ana Paula Marques de Almeida
+       DESCRIÇÃO: Página HTML com JavaScript que permite calcular a média de um número de notas a definir pelo utilizador.
+-->
+
+   <html>
+    <!-- Cabeçalho -->
+    <head>
+        <meta charset="utf-8">
+        <title>Média de Notas (0 até 20)</title>
+
+        <!-- Javascript -->
+        <script language="JavaScript" type="text/javascript">
+
+            function calcMedia(){
+                var nota=0, i;
+                var media=0;
+                var limite=parseInt(window.prompt("Pretende calcular a média de quantas notas?", ""));
+
+                for(i=1;i<=limite;i++){
+                    do{
+                        nota = parseInt(window.prompt("Insira a " + i + "ª nota (de 0 a 20)", ""));
+                        if(nota<0 || nota>20){
+                            alert("Insira apenas valores de 0 até 20!");
+                        }
+                    } while((nota < 0 || nota > 20));
+                    media=media+nota;
+                }
+                media=media/limite;
+                document.getElementById("resultado").innerHTML = "A média total das " + limite + " notas inseridas é " + media.toFixed(2) + " valores.";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Cálculo da Média das Notas</h1>
+            <form id="form">
+            <input style="cursor:pointer;" title="Clique para começar o cálculo" onClick="calcMedia()" value="Calcular notas">
+            </form>
+        <h2 id="mostraNotas"></h2>
+        <h2 id="resultado"></h2>
+
+    </body>
+</html>
