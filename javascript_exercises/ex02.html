@@ -1,0 +1,58 @@
+<!--
+         ____.                                       .__        __   
+        |    |____ ___  _______    ______ ___________|__|______/  |_ 
+        |    \__  \\  \/ /\__  \  /  ___// ___\_  __ \  \____ \   __\
+    /\__|    |/ __ \\   /  / __ \_\___ \\  \___|  | \/  |  |_> >  |  
+    \________(____  /\_/  (____  /____  >\___  >__|  |__|   __/|__|  
+                  \/           \/     \/     \/         |__|        
+       AUTOR: Ana Paula Marques de Almeida
+       DATA: 30 de Setembro de 2022
+-->
+
+<!DOCTYPE html>
+<html>
+</head>
+    <title>Gerar número aleatório</title>
+    <meta name="keywords" content="programação, web, 5414, exercicios, javascript" />
+    <meta name="author" content="Ana Paula Almeida" />
+    <meta name="description" content="Página principal do site que indexa os exercícios de javascript concretizados durante o módulo 5414 - Programação WEB." />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="JavaScript" type="text/javascript" src="js/ex01.js" ></script>
+    <script language="JavaScript" type="text/javascript" src="js/ex02.js" ></script>
+<body>
+    <div class="navbar">
+        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#news"><i class="fa fa-code"></i> Sobre o Javascript</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-fw fa-wrench"></i> Exercícios
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="ex01.html">Par ou Ímpar?</a>
+            <a href="ex02.html">Gerar número aleatório</a>
+            <a href="ex03.html">Conversor Quilómetros > Milhas</a>
+            <a href="ex04.html">Conversor Celcius > Fahrenheit</a>
+            <a href="ex05.html">Calculadora de idade</a>
+            <a href="ex06.html">Ordem crescente de X até 100</a>
+            <a href="ex07.html">Ordem decrescente de X até 1 (ímpares)</a>
+          </div>
+        </div> 
+    </div>
+    <div>
+        <h1>2. Gerar número aleatório</h1>
+        <p>Nesta página, geramos um número aleatório de 1 até 100 e verificamos a sua paridade usando a mesma função utilizada no exercício anterior.</p>
+    </div>
+
+    <div>
+        <form name="formulario" onsubmit="return validar();" method="post">
+            <label for="num">Número gerado:</label><br><input type="text" id="num" name="num" value="0"><br/><br/>
+            <input type="submit" value="Gerar Número">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div id="output"></div>
+    </div>
+</body>
+
+</html>

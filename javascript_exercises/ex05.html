@@ -1,0 +1,61 @@
+<!--
+         ____.                                       .__        __   
+        |    |____ ___  _______    ______ ___________|__|______/  |_ 
+        |    \__  \\  \/ /\__  \  /  ___// ___\_  __ \  \____ \   __\
+    /\__|    |/ __ \\   /  / __ \_\___ \\  \___|  | \/  |  |_> >  |  
+    \________(____  /\_/  (____  /____  >\___  >__|  |__|   __/|__|  
+                  \/           \/     \/     \/         |__|        
+       AUTOR: Ana Paula Marques de Almeida
+       DATA: 30 de Setembro de 2022 (actualizado a 4 de Outubro de 2022)
+       VERSÃO: 2
+            - Foi acrescentada a validação no javascript para que o formulário aceite apenas valores de 1 até 120 anos de idade.
+
+-->
+
+<!DOCTYPE html>
+<html>
+</head>
+    <title>Calculadora de idade</title>
+    <meta name="keywords" content="programação, web, 5414, exercicios, javascript" />
+    <meta name="author" content="Ana Paula Almeida" />
+    <meta name="description" content="Página principal do site que indexa os exercícios de javascript concretizados durante o módulo 5414 - Programação WEB." />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language="JavaScript" type="text/javascript" src="js/ex05.js" ></script>
+<body>
+    <div class="navbar">
+        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#news"><i class="fa fa-code"></i> Sobre o Javascript</a>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-fw fa-wrench"></i> Exercícios
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="ex01.html">Par ou Ímpar?</a>
+            <a href="ex02.html">Gerar número aleatório</a>
+            <a href="ex03.html">Conversor Quilómetros > Milhas</a>
+            <a href="ex04.html">Conversor Celcius > Fahrenheit</a>
+            <a href="ex05.html">Calculadora de idade</a>
+            <a href="ex06.html">Ordem crescente de X até 100</a>
+            <a href="ex07.html">Ordem decrescente de X até 1 (ímpares)</a>
+          </div>
+        </div> 
+    </div>
+    <div>
+        <h1>5. Calculadora de idade</h1>
+        <p>Através da data de nascimento inserida pelo utilizador, calculamos a idade do mesmo.</p>
+    </div>
+
+    <div>
+        <form name="formulario" onsubmit="return calculaIdade();" method="post">
+            <label for="datanasc">Insira a data em que nasceu:</label><input type="date" id="datanasc" name="trip-start" min="1900-01-01"><br/><br/>
+            <label for="idade">A sua idade é de </label> <input type="number" id="idade" name="idade" value="0" disabled> anos. <br/><br/>
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div id="output"></div>
+    </div>
+</body>
+
+</html>
