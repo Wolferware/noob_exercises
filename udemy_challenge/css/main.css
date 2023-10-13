@@ -1,0 +1,66 @@
+/* Variáveis Globais*/
+:root {
+  --color-default: #222831;
+  --color-background: #ffffff;
+  --font-text: 'Poppins', sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Index Principal */
+body {
+    font-family: var(--font-text);
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    width: 100%;
+    background-color: var(--color-default);
+}
+h1 {
+    font-size: 2rem;
+    padding-bottom: 1.4rem;;
+}
+main {
+    padding: 2rem;;
+    background-color: var(--color-background);
+    width: 30rem;
+    height: auto;           /* Ajusta-se ao tamanho do conteúdo*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  -webkit-transform: translate(-50%, -50%);  /* Para safari*/
+	  transform: translate(-50%, -50%);
+    border-radius: 2rem;
+}
+.bemvindo {
+    padding-bottom: 2rem;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-background);
+    background-color: var(--color-default);
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease-in-out;
+}
+nav a:hover {
+    background-color: var(--color-background);
+    color: var(--color-default);
+}
+nav a:last-child {
+    border-radius: 0 0 2rem 2rem;   /* arrendonda só o 1º link */
+}
+nav a:first-child {
+    border-radius: 2rem 2rem 0 0;   /* arrendonda só o último link */
+}
